@@ -5,7 +5,7 @@ let myFavoriteHero = "Hulk";
 //1.2:Crea una variable llamada x, asigna el valor 50 a ella.
 let x = 50;
 
-//1.3:Crea una variable llamada x, asigna el valor 50 a ella.
+//1.3:Crea una variable llamada 'h' con el valor 5 y otra 'y' con el valor 10. 
 let h = 5;
     y = 10;
 
@@ -16,6 +16,8 @@ let z = (h + y);
 //1.1: Dado el siguiente javascript, cambia el valor de la propiedad age a 25.
 const character = {name: "Jack Sparrow", age: 10};
 character.age = 25;
+
+console.log(character);
 
 //1.2: Declara 3 variables con los nombres y valores siguientes:
 let firstName = "Jon";
@@ -29,7 +31,7 @@ console.log("Soy " + firstName + " " + lastName + " tengo " + age + "años y me 
 const toy1 = {name: 'Buss myYear', price: 19};
 const toy2 = {name: 'Rallo mcKing', price: 29};
 
-console.log("El precio total de ",  toy1.name, " y ", toy2.name, " es ", toy1.price + toy2.price);
+console.log("El precio total de", toy1.name, "y", toy2.name,"es", toy1.price + toy2.price)
 
 //1.4: Dado el siguiente javascript, actualiza el valor de la variable globalBasePrice a 25000 
 //y actualiza la propiedad finalPrice de todos los coches con el valor de su propiedad 
@@ -72,11 +74,12 @@ console.log(resto);
 
 //1.4: Usa el correcto operador de asignación que resultará en o = 15, 
 //teniendo dos variables p = 10 y j = 5.
+let p =10;
+let j = 5;
 
-let p = 10;
-    j = 5;
+let o = p += 5;
 
-let o = p += j;
+console.log(o);
 
 //1.5: Usa el correcto operador de asignación que resultará en i = 50,
 //teniendo dos variables c = 10 y m = 5.
@@ -89,21 +92,25 @@ let i = c *= m;
 //1.1: Consigue el valor "HULK" del array de avengers y muestralo por consola.
 const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
 
-avenger = avengers[0];
+let avenger = avengers[0];
+
+console.log(avenger);
 
 //1.2: Cambia el primer elemento de avengers a "IRONMAN"
 avengers[0] = "IRONMAN";
 
 //1.3: Console numero de elementos en el array usando la propiedad correcta de Array.
-console.log(avengers.length);
+let elements = avengers.length;
+
+console.log(elements);
 
 //1.4: Añade 2 elementos al array: "Morty" y "Summer".
 const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
 
-rickAndMortyCharacters.push("Morty")
-rickAndMortyCharacters.push("Summer")
+rickAndMortyCharacters.push("Morty");
+rickAndMortyCharacters.push("Summer");
 
-console.log("El ultimo personaje es", rickAndMortyCharacters[4])
+console.log(rickAndMortyCharacters);
 
 //1.5: Elimina el último elemento del array y muestra el primero y el último por consola.
 const rickAndMortyCharacters2 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
@@ -113,6 +120,9 @@ console.log(rickAndMortyCharacters2)
 
 //1.6: Elimina el segundo elemento del array y muestra el array por consola.
 const rickAndMortyCharacters3 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+rickAndMortyCharacters3.splice(1, 2);
+
+console.log(rickAndMortyCharacters3);
 
 //Iteracion #5: Condicionales
 // En base al código siguiente, muestra los mensajes correctos por consola.
@@ -147,27 +157,26 @@ if ((number2 / 2 == number1) || (number1 / 5 == number3)); {
 
 //Iteracion #6: Bucles
 // 1.1 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola.
-for (let i = 0; i <= 9; i++){
-    console.log(i);
+for(let i = 0; i < 10; i++) {
+  console.log(i);
 }
 
 //1.2 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola solo 
 //cuando el resto del numero dividido entre 2 sea 0.
-for (let x = 0; x <= 9; x++){
-    if(i % 2 === 0){
-        console.log(x);
-    }
+for(let x = 0; x < 9; x++) {
+  if(x % 2 == 0){
+    console.log(x);
+  }
 }
 
 //1.3 Crea un bucle para conseguir dormir contando ovejas. 
 //Este bucle tiene que dar 10 vueltas, es decir, 10 console.log.
 //Muestra por consola un mensaje diciendo 'Intentando dormir 🐑' en cada vuelta del bucle 
 //y cambia el mensaje en la décima vuelta a 'Dormido!'.
-let dormir = [];
-
-for (let y = 1; y <= 10; y++){
-    dormir[y]= "Intentando dormir " + y +" 🐑";}
-
-dormir[dormir.length-1] = "Dormido!";{
-    console.log(dormir);
+for(let z = 0; z < 11; z++) {
+  if(z < 10) {
+    console.log("Intentando dormir:", z,"🐑")
+  }else{
+    console.log("Dormido!")
+  }
 }
